@@ -225,7 +225,7 @@ pub mod v1 {
         {
             use ruma_common::{OwnedEventId, OwnedRoomId};
 
-            // FIXME: find a way to make this if-else collapse with serde recognizing trailing
+            // FIXME: find a way to make this match collapse with serde recognizing trailing
             // Option
             let (room_id, event_id, rel_type, event_type): (
                 OwnedRoomId,
