@@ -9,6 +9,7 @@ Improvements:
 
 * Add `From<&UserId>` and `From<&OwnedUserId>` implementations for `UserIdentifier`
 * Add `UserIdentifier::email` constructor
+* Add unstable support for the `relations::get_events_related_to_event` endpoint (MSC2675)
 
 # 0.14.0
 
