@@ -8,6 +8,8 @@ pub mod v3 {
     use std::{collections::BTreeMap, time::Duration};
 
     use js_int::UInt;
+    #[cfg(feature = "appservice")]
+    use ruma_common::UserId;
     use ruma_common::{
         api::ruma_api,
         events::{
@@ -70,6 +72,12 @@ pub mod v3 {
             )]
             #[ruma_api(query)]
             pub timeout: Option<Duration>,
+
+            /// The virtual User ID to sync as for appservices
+            #[cfg(feature = "appservice")]
+            #[serde(default, skip_serializing_if = "Option::is_none")]
+            #[ruma_api(query)]
+            pub user_id: Option<&'a UserId>,
         }
 
         response: {

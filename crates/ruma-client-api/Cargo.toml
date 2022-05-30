@@ -16,6 +16,7 @@ all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
+appservice = []
 compat = []
 unstable-exhaustive-types = []
 unstable-msc2246 = []
